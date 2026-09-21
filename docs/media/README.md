@@ -19,13 +19,13 @@ source filenames begin with `com.UnityTechnologies.com.unity.template.urpblank-2
 
 Taken from the project walkthrough (https://youtu.be/z2SDj-kG6RA), a Quest 3 capture. The
 only processing is a centre crop that removes the headset's black lens border, a resize, and
-for the animation a 1.3x speed-up.
+for the animation, seven short excerpts sped up 1.4x to 2.2x and joined with brief fades, in story order.
 
 | File | Video position | Subject | Used in README |
 | --- | --- | --- | --- |
 | `step-retrieve.jpg` | 1:28, single frame | Seismometer highlighted in the equipment bay | Mission step 1 |
 | `step-deploy.jpg` | 3:52, single frame | DEPLOY panel in the target zone | Mission step 4 |
-| `lamp-route-walk.webp` | 3:12 to 3:20, looping | Walking the lamp chain through shadow | "What is this?" |
+| `eva-journey.webp` | 0:00, 0:12, 5:02, 3:13, 4:05, 6:16 and 8:24, cut together | The whole EVA in about 30 seconds | "What is this?" |
 
 ## Built from the captures
 
