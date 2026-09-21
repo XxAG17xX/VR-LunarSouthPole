@@ -25,7 +25,7 @@ for the animation, eight short excerpts sped up 1.4x to 2.2x and joined with bri
 | --- | --- | --- | --- |
 | `step-retrieve.jpg` | 1:28, single frame | Seismometer highlighted in the equipment bay | Mission step 1 |
 | `step-deploy.jpg` | 3:52, single frame | DEPLOY panel in the target zone | Mission step 4 |
-| `eva-journey.webp` | 0:00, 0:12, 0:37, 5:02, 3:13, 4:05, 6:16 and 8:24, cut together | The whole EVA in about 30 seconds | "What is this?" |
+| `eva-montage.webp` | 0:00, 0:12, 0:37, 5:02, 3:13, 4:05, 6:16 and 8:24, cut together | The whole EVA in about 30 seconds | "What is this?" |
 
 ## Built from the captures
 

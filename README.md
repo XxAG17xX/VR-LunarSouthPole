@@ -29,7 +29,7 @@ I rebuilt a small patch of the lunar south pole from NASA elevation data, swappe
 The question driving it wasn't just *can the Moon look convincing in VR?* It was **how much of a scientifically grounded lunar environment can a consumer headset actually handle, and where does fidelity have to give way to practical limits?**
 
 <p align="center">
-  <img src="docs/media/eva-journey.webp" alt="The whole EVA in about 30 seconds: picking up the seismometer, the sun cresting the horizon, walking around the Eagle lander and climbing its ladder, cratered terrain in low light, the cyan lamp route through shadow, deploying the instrument, rising above the whole square of terrain, and the sun low over the surface at the end." width="440"><br>
+  <img src="docs/media/eva-montage.webp" alt="The whole EVA in about 30 seconds: picking up the seismometer, the sun cresting the horizon, walking around the Eagle lander and climbing its ladder, cratered terrain in low light, the cyan lamp route through shadow, deploying the instrument, rising above the whole square of terrain, and the sun low over the surface at the end." width="440"><br>
   <sub>The whole EVA in about 30 seconds, from the lander to the sun going down. Cut from the <a href="https://youtu.be/z2SDj-kG6RA">full walkthrough</a>.</sub>
 </p>
 
