@@ -135,7 +135,7 @@ Material:
     - _Color: {r: 0.14999998, g: 0.34999996, b: 0.85, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _SunDirection: {r: -0.84355843, g: 0.02617695, b: -0.536399, a: 0}
+    - _SunDirection: {r: -0.39634454, g: 0.026176954, b: -0.9177286, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &8148052668221119287
