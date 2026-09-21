@@ -12,9 +12,11 @@ A physically parameterised VR environment for **Meta Quest 3**, built in **Unity
 
 </div>
 
-[![Lunar terrain under low-angle sunlight, with the Eagle lander and Earth above the horizon. Click to watch the project walkthrough.](docs/media/lunar-overview.png)](https://youtu.be/z2SDj-kG6RA)
+<p align="center">
+  <a href="https://youtu.be/z2SDj-kG6RA"><img src="docs/media/lander-earth.jpg" alt="The Eagle lander on the lunar surface, with Earth above the horizon. Click to watch the project walkthrough." width="620"></a>
+</p>
 
-<p align="center"><em>A view from the simulation, reproduced from the dissertation. Click the image to watch the walkthrough on YouTube.</em></p>
+<p align="center"><em>On the surface, a long way from home. An original project capture; click to watch the walkthrough on YouTube.</em></p>
 
 ## The Project
 
@@ -48,16 +50,16 @@ The dissertation describes an approximately **900 m traverse**, connecting envir
 
 <table>
   <tr>
-    <td width="57%"><img src="docs/media/earth-terminator.png" alt="Earth's illuminated and dark hemispheres, rendered by the custom day-night shader, beside the simulated Sun." width="100%"></td>
-    <td width="43%"><img src="docs/media/eva-traverse.jpg" alt="A dark lunar traverse illuminated by a cyan navigation lamp chain, with Earth overhead." width="100%"></td>
+    <td width="50%"><img src="docs/media/lunar-craters.jpg" alt="Cratered lunar terrain with bright ridges and deep shadows, looking back toward the distant lander." width="100%"></td>
+    <td width="50%"><img src="docs/media/lamp-route.jpg" alt="A cyan-lit navigation route through shadow toward a brightly illuminated lunar ridge." width="100%"></td>
   </tr>
   <tr>
-    <td><strong>A connected sky.</strong> The Earth shader uses the same sun direction as the environment's lighting.</td>
+    <td><strong>A landscape shaped by light.</strong> Low-angle illumination reveals crater rims and leaves the traverse in deep shadow.</td>
     <td><strong>Navigation becomes part of the task.</strong> The lamp chain makes a route through shadow legible.</td>
   </tr>
 </table>
 
-<sub>Images are project captures from the dissertation, Figures 4.6 and 4.15. They document that version of the simulation, not every later change in this repository.</sub>
+<sub>Original project captures from April 2026, shown without retouching. They document that version of the simulation, not every later change in this repository.</sub>
 
 ## The Research
 
