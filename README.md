@@ -1,102 +1,123 @@
-<div align="center">
-
-# VR Lunar South Pole
-
-### From orbital elevation data to a standalone lunar EVA.
-
-A physically parameterised VR environment for **Meta Quest 3**, built in **Unity 6**.
-
-**Kartik Gupta** · B.A.I. Computer Engineering · Trinity College Dublin
-
-[Watch the walkthrough](https://youtu.be/z2SDj-kG6RA) · [The research](#the-research) · [How it works](#how-it-works) · [Explore the source](#explore-the-source)
-
-</div>
+<a href="https://youtu.be/z2SDj-kG6RA"><img src="docs/media/hero.jpg" alt="VR Lunar South Pole: the Eagle lander on the lunar surface with Earth above the horizon. Click to watch the walkthrough." width="100%"></a>
 
 <p align="center">
-  <a href="https://youtu.be/z2SDj-kG6RA"><img src="docs/media/lander-earth.jpg" alt="The Eagle lander on the lunar surface, with Earth above the horizon. Click to watch the project walkthrough." width="620"></a>
+  <img src="https://img.shields.io/badge/Unity-6-222222?style=flat-square&logo=unity&logoColor=white" alt="Unity 6">
+  <img src="https://img.shields.io/badge/Meta_Quest_3-standalone-2d4f86?style=flat-square&logo=meta&logoColor=white" alt="Meta Quest 3, standalone">
+  <img src="https://img.shields.io/badge/URP-C%23_%C2%B7_HLSL-3b3b52?style=flat-square" alt="URP, C#, HLSL">
+  <img src="https://img.shields.io/badge/terrain-NASA_LRO_%2F_LOLA-1f4d63?style=flat-square&logo=nasa&logoColor=white" alt="Terrain from NASA LRO / LOLA">
+  <img src="https://img.shields.io/badge/final--year_project-April_2026-4a4a4a?style=flat-square" alt="Final-year project, April 2026">
 </p>
 
-<p align="center"><em>On the surface, a long way from home. An original project capture; click to watch the walkthrough on YouTube.</em></p>
+<p align="center">
+  <b>Kartik Gupta</b> · B.A.I. Computer Engineering · Trinity College Dublin<br>
+  <a href="https://youtu.be/z2SDj-kG6RA">Watch the walkthrough</a> ·
+  <a href="#the-mission">The mission</a> ·
+  <a href="#the-research">The research</a> ·
+  <a href="#how-it-works">How it works</a> ·
+  <a href="#explore-the-source">Explore the source</a>
+</p>
 
-## The Project
-
-What would it feel like to leave a lunar lander, carry a scientific instrument across unfamiliar terrain, and navigate into shadow with the Earth hanging above the horizon?
-
-This final-year engineering project turns that scenario into a standalone VR experience. It reconstructs a small region near the lunar south pole using NASA elevation data, replaces Earth-like environmental defaults with documented lunar parameters, and gives the player a complete instrument-deployment mission.
-
-The central question is not just whether the Moon can look convincing in VR. It is **how much of a scientifically grounded lunar environment can be delivered on consumer standalone hardware, and where fidelity has to give way to practical constraints**.
-
-| At a glance | |
-| :--- | :--- |
-| Experience | Single-player lunar extravehicular activity (EVA) mission |
-| Environment | Haworth-Nobile region, lunar south pole |
-| Terrain | 1,024 m x 1,024 m patch derived from LOLA elevation data |
-| Target platform | Meta Quest 3, standalone Android application |
-| Technology | Unity 6, URP, C#, HLSL, Meta XR SDK |
-| Academic context | B.A.I. Computer Engineering final-year project, April 2026 |
-
-**No download is needed to explore the project.** The [video walkthrough](https://youtu.be/z2SDj-kG6RA), images, and research summary are the intended starting points. This repository preserves the Unity project and its development history; it is not packaged as a one-click public release.
-
-## The EVA Experience
-
-The mission is inspired by lunar seismic science and the Artemis Lunar Environment Monitoring Station (LEMS) objective. It is a simplified interactive scenario, not a reproduction of an approved mission procedure.
-
-1. **Retrieve the instrument.** Interact with the lander's equipment bay and pick up the seismometer.
-2. **Traverse the surface.** Carry it toward the science zone, with terrain-following locomotion and lunar-gravity movement.
-3. **Navigate the shadows.** Toggle a terrain-aligned chain of lamps and use the visor HUD to follow the objective.
-4. **Deploy the seismometer.** Reach the target zone and complete the hold-to-deploy interaction.
-
-The dissertation describes an approximately **900 m traverse**, connecting environmental rendering to an actual task rather than an empty scene. Doors, proximity highlights, a navigation arrow, a deployment indicator, and a quick-action menu support the experience.
-
-<table>
+<table align="center">
   <tr>
-    <td width="50%"><img src="docs/media/lunar-craters.jpg" alt="Cratered lunar terrain with bright ridges and deep shadows, looking back toward the distant lander." width="100%"></td>
-    <td width="50%"><img src="docs/media/lamp-route.jpg" alt="A cyan-lit navigation route through shadow toward a brightly illuminated lunar ridge." width="100%"></td>
-  </tr>
-  <tr>
-    <td><strong>A landscape shaped by light.</strong> Low-angle illumination reveals crater rims and leaves the traverse in deep shadow.</td>
-    <td><strong>Navigation becomes part of the task.</strong> The lamp chain makes a route through shadow legible.</td>
+    <td align="center"><h3>1.625 m/s²</h3><sub>lunar gravity</sub></td>
+    <td align="center"><h3>1.5°</h3><sub>sun above the horizon</sub></td>
+    <td align="center"><h3>1 km²</h3><sub>of real NASA terrain</sub></td>
+    <td align="center"><h3>~900 m</h3><sub>EVA traverse</sub></td>
+    <td align="center"><h3>~71 FPS</h3><sub>on a standalone Quest 3</sub></td>
   </tr>
 </table>
 
-<sub>Original project captures from April 2026, shown without retouching. They document that version of the simulation, not every later change in this repository.</sub>
+## What is this?
 
-## The Research
+Picture stepping off a lunar lander, grabbing a science instrument, and carrying it across terrain you've never seen, into shadow, with the Earth hanging just above the horizon. That's what this project turns into a standalone VR experience.
 
-**VR Simulation of the Lunar South Pole: A Physically Parameterised Environment**  
-Kartik Gupta · Trinity College Dublin · April 2026  
-Supervisor: **Mads Haahr**
+I rebuilt a small patch of the lunar south pole from NASA elevation data, swapped Unity's Earth-like defaults for documented lunar parameters, and gave the player a full instrument-deployment mission to carry out.
 
-The full dissertation is available under the **B.A.I. Computer Engineering entry in the Education section of my LinkedIn profile**. The PDF is intentionally not duplicated in this repository.
+The question driving it wasn't just *can the Moon look convincing in VR?* It was **how much of a scientifically grounded lunar environment can a consumer headset actually handle, and where does fidelity have to give way to practical limits?**
 
-The project builds on the research direction of Nilsson et al.'s CHI 2023 study, *Using Virtual Reality to Shape Humanity's Return to the Moon: Key Takeaways from a Design Study*. Rather than porting that system, I built a new Unity implementation for consumer standalone hardware. Tommy Nilsson also provided early guidance on the project scope and the Apollo lander and Orion interior models.
+<p align="center">
+  <img src="docs/media/lamp-route-walk.webp" alt="A few seconds of the traverse: walking through shadow along the cyan lamp chain, with a sunlit ridge and Earth above." width="440"><br>
+  <sub>A few seconds from the walkthrough: following the lamp chain through shadow.</sub>
+</p>
 
-### Grounded in data, explicit about approximations
+| At a glance | |
+| :--- | :--- |
+| **Experience** | Single-player lunar EVA (extravehicular activity) mission |
+| **Where** | Haworth-Nobile region, lunar south pole |
+| **Terrain** | 1,024 m × 1,024 m patch built from LOLA elevation data |
+| **Runs on** | Meta Quest 3, as a standalone Android app |
+| **Built with** | Unity 6, URP, C#, HLSL, Meta XR SDK |
+| **Context** | B.A.I. Computer Engineering final-year project, April 2026 |
 
-The dissertation traces the environment's design parameters to published scientific sources:
+> [!TIP]
+> **You don't need to download anything.** The [video walkthrough](https://youtu.be/z2SDj-kG6RA), the images here and the research summary below are the best way in. This repo keeps the full Unity project and its history, but it isn't packaged as a one-click release.
 
-| Input or design parameter | Research basis |
+## The mission
+
+It's inspired by lunar seismic science and the Artemis Lunar Environment Monitoring Station (LEMS) objective: a simplified interactive scenario rather than a copy of any approved mission procedure. Four steps, roughly a **900 m traverse** end to end:
+
+<table>
+  <tr>
+    <td width="25%" align="center"><img src="docs/media/step-retrieve.jpg" alt="The seismometer glowing in the lander's equipment bay, ready to pick up." width="100%"></td>
+    <td width="25%" align="center"><img src="docs/media/lunar-craters.jpg" alt="Cratered lunar terrain with bright ridges and deep shadows, looking back toward the distant lander." width="100%"></td>
+    <td width="25%" align="center"><img src="docs/media/lamp-route.jpg" alt="A cyan-lit navigation route through shadow toward a brightly illuminated lunar ridge." width="100%"></td>
+    <td width="25%" align="center"><img src="docs/media/step-deploy.jpg" alt="The DEPLOY panel on the visor HUD in the target zone, with the deployment area highlighted." width="100%"></td>
+  </tr>
+  <tr>
+    <td valign="top"><b>1 · Retrieve</b><br><sub>Open the lander's equipment bay and pick up the seismometer.</sub></td>
+    <td valign="top"><b>2 · Traverse</b><br><sub>Carry it toward the science zone, with terrain-following movement in lunar gravity.</sub></td>
+    <td valign="top"><b>3 · Navigate</b><br><sub>Switch on a chain of lamps laid along the terrain and follow the visor HUD through the shadows.</sub></td>
+    <td valign="top"><b>4 · Deploy</b><br><sub>Reach the target zone and hold to deploy.</sub></td>
+  </tr>
+</table>
+
+Along the way, doors, proximity highlights, a navigation arrow, a deployment indicator and a quick-action menu keep things readable, so the environment rendering is tied to an actual task instead of an empty scene.
+
+<sub>All captures are original, unretouched project images from April 2026 (the Retrieve and Deploy frames are taken from the walkthrough video). They show that version of the simulation, not every later change in this repo.</sub>
+
+## The research
+
+**VR Simulation of the Lunar South Pole: A Physically Parameterised Environment**<br>
+Kartik Gupta · Trinity College Dublin · April 2026 · Supervisor: **Mads Haahr**
+
+The full dissertation is on my LinkedIn, under the **B.A.I. Computer Engineering entry in the Education section**. I've kept the PDF out of this repo on purpose.
+
+It builds on the direction of Nilsson et al.'s CHI 2023 study, *Using Virtual Reality to Shape Humanity's Return to the Moon: Key Takeaways from a Design Study*. Rather than porting their system, I built a new Unity implementation aimed at consumer standalone hardware. Tommy Nilsson also gave early guidance on the project scope, and provided the Apollo lander and Orion interior models.
+
+### Grounded in data
+
+Every key design parameter in the dissertation traces back to a published source:
+
+| Parameter | What the simulation uses |
 | :--- | :--- |
 | Surface gravity | 1.625 m/s² |
-| Low-angle solar illumination | 1.5° solar elevation |
+| Sun angle | Low-angle light at 1.5° solar elevation |
 | Terrain relief | NASA LRO / LOLA elevation data, 5 m/pixel source product |
-| Terrain representation | 1,025 x 1,025 Unity heightmap over a 1,024 m square patch |
-| Sun and Earth apparent size | Dissertation targets of 0.53° and 1.9°, respectively |
-| Lighting approach | Hard direct shadows and zero ambient-light setting |
+| Terrain in Unity | 1,025 × 1,025 heightmap over a 1,024 m square |
+| Sun and Earth size in the sky | 0.53° and 1.9° apparent size (dissertation targets) |
+| Lighting | Hard direct shadows, zero ambient light |
 
-These are the **dissertation's design parameters**, not a claim that every visual effect or later scene revision is an exact physical model. The solar cycle is deliberately accelerated, Earth libration is approximated, and the starfield is a visual background rather than an ephemeris-driven sky. Motion, interaction ranges, and mission pacing also make usability concessions.
+<p align="center">
+  <img src="docs/media/earth-terminator.png" alt="Earth, half in shadow, seen from the lunar surface in the simulation." width="620"><br>
+  <sub>The Earth seen from the lunar surface, day/night terminator and all. Dissertation Figure 4.6.</sub>
+</p>
 
 ### What the evaluation found
 
-The evaluation combines a **fidelity-versus-feasibility analysis**, comparison with prior work, and on-device performance observations. Table 5.2 of the dissertation reports approximately **71 FPS at a 72 Hz target**, with **96% GPU utilisation**, on a standalone Quest 3 build.
+The evaluation combines a **fidelity-versus-feasibility analysis**, a comparison with prior work, and on-device performance measurements. On a standalone Quest 3 build, Table 5.2 of the dissertation reports about **71 FPS against a 72 Hz target, with 96% GPU utilisation**.
 
-Those results show feasibility for the evaluated build, but also limited GPU headroom. They are historical measurements, **not a performance guarantee for the current branch or every viewing direction**.
+So it works on the headset, but with very little GPU headroom to spare.
 
-A planned miniPXI user study was not conducted within the university ethics-approval timeline. The project therefore does **not** claim validated training effectiveness, measured learning gains, or user-study evidence of presence. It is an independent academic prototype, not a NASA or ESA training product.
+> [!NOTE]
+> **Being upfront about the limits.**
+> - The parameters above are the **dissertation's design targets**, not a claim that every visual effect or later scene revision is an exact physical model. The solar cycle is deliberately sped up, Earth libration is approximated, and the starfield is a visual backdrop rather than an ephemeris-driven sky. Movement, interaction ranges and mission pacing also bend a little for usability.
+> - The performance numbers are **historical measurements of the evaluated build**, not a guarantee for the current branch or every viewing direction.
+> - A planned miniPXI user study couldn't run within the university's ethics-approval timeline, so this project **doesn't claim** validated training effectiveness, measured learning gains, or user-study evidence of presence.
+> - It's an independent academic prototype, **not a NASA or ESA training product**. The Eagle is a historical Apollo asset used in an Artemis-inspired scenario, not a model of the planned Artemis lander.
 
-## How It Works
+## How it works
 
-### From lunar data to an interactive environment
+### From lunar data to a playable environment
 
 ```mermaid
 flowchart TD
@@ -113,7 +134,7 @@ flowchart TD
     K -. "Fidelity and performance trade-offs" .-> H
 ```
 
-The terrain pipeline and physical parameters establish the environment. Custom runtime systems connect the Sun, Earth, player, instruments, navigation, and HUD into a single mission.
+The terrain pipeline and the physical parameters set up the world. Custom runtime systems then tie the Sun, Earth, player, instrument, navigation and HUD together into one mission.
 
 ### The mission state machine
 
@@ -128,9 +149,15 @@ stateDiagram-v2
     Complete --> [*]
 ```
 
-These state names and transitions come directly from [`MissionManager.cs`](Assets/Scripts/MissionManager.cs).
+These states and transitions come straight from [`MissionManager.cs`](Assets/Scripts/MissionManager.cs).
 
-## Explore the Source
+## Explore the source
+
+The main scene is [`Assets/LunarVR.unity`](Assets/LunarVR.unity), and the code that makes it tick lives in [`Assets/Scripts/`](Assets/Scripts/).
+
+<details>
+<summary><strong>Where each system lives</strong></summary>
+<br>
 
 | System | Implementation |
 | :--- | :--- |
@@ -143,41 +170,42 @@ These state names and transitions come directly from [`MissionManager.cs`](Asset
 | Equipment-bay interaction | [`DoorController.cs`](Assets/Scripts/DoorController.cs), [`DoorHandleInteractable.cs`](Assets/Scripts/DoorHandleInteractable.cs) |
 | Repeatable scene and rendering setup | [`Assets/Scripts/Editor/`](Assets/Scripts/Editor/) |
 
-The main scene is [`Assets/LunarVR.unity`](Assets/LunarVR.unity). The checked-in editor version is **Unity 6000.3.8f1**; package versions are recorded in [`Packages/manifest.json`](Packages/manifest.json) and [`Packages/packages-lock.json`](Packages/packages-lock.json).
-
-<details>
-<summary><strong>Repository storage, Git LFS, and reproduction notes</strong></summary>
-
-This is both a project showcase and a personal development archive. The large Unity assets are retained so the work can be revisited, not because visitors are expected to download and build it.
-
-The [`.gitattributes`](.gitattributes) file tracks large asset types through **Git Large File Storage (LFS)**, including textures, models, audio, and Unity `.asset` files. Git stores small pointer files; the corresponding binary content is stored separately through LFS. A checkout without those objects is not a complete Unity project. See [GitHub's Git LFS documentation](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage).
-
-The small screenshots under `docs/media/` are intentionally stored in regular Git so the README does not require readers to fetch the project's LFS assets.
-
-If you do choose to inspect the project locally, use the recorded Unity version, retrieve the LFS objects, and allow Package Manager to resolve the dependencies. Android build support, the relevant Meta/OpenXR setup, and an authorised headset connection are additional requirements for device testing. A clean-machine build is not guaranteed by this README.
-
-The repository also includes an embedded URP package with local stereo-flare changes. Its [patch notes](Packages/com.unity.render-pipelines.universal/LUNARVR-PATCH.md) explain why it is retained. Rendering and headset-specific refinements made after the dissertation should not be confused with the configuration evaluated in the report; flare alignment and occlusion remain areas of device-specific testing.
-
-Appendix B of the dissertation names an earlier repository URL and shader location. **This repository is the current project archive**, and the source links above reflect its actual layout.
+The checked-in editor version is **Unity 6000.3.8f1**; package versions are in [`Packages/manifest.json`](Packages/manifest.json) and [`Packages/packages-lock.json`](Packages/packages-lock.json).
 
 </details>
 
-## Scope and Next Steps
+<details>
+<summary><strong>Repo storage, Git LFS, and building it yourself</strong></summary>
+<br>
 
-The prototype is deliberately bounded: one terrain region, one player, and one EVA mission. Terrain texturing is simplified, secondary illumination from neighbouring terrain is not modelled, celestial motion is approximate, and spacesuit biomechanics are outside the scope. The Eagle is a historical Apollo asset used in an Artemis-inspired scenario, not a model of the planned Artemis landing vehicle.
+This repo is both a showcase and my personal development archive. The big Unity assets are kept so the work can be revisited, not because anyone's expected to download and build it.
 
-The dissertation identifies formal user evaluation, improved terrain shading, ephemeris-driven celestial motion, astronaut embodiment, a lunar rover, and expanded multi-scene environments as future directions. The Orion interior was explored during development but is not part of the completed surface mission.
+[`.gitattributes`](.gitattributes) sends large asset types (textures, models, audio, Unity `.asset` files) through **Git Large File Storage (LFS)**. Git itself only stores small pointer files, and the actual binaries live separately in LFS, so a checkout without them isn't a complete Unity project. More in [GitHub's Git LFS docs](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage). The small images under `docs/media/` are deliberately kept in regular Git, so this README doesn't need any LFS downloads.
 
-## References and Acknowledgements
+If you do want to open it locally: use the recorded Unity version, pull the LFS objects, and let Package Manager resolve the dependencies. Testing on a device also needs Android build support, the relevant Meta/OpenXR setup and an authorised headset connection. I can't promise a clean-machine build from this README alone.
 
-- **Mads Haahr**, project supervisor, Trinity College Dublin.
-- **Tommy Nilsson**, for early scoping guidance and provision of the Apollo lander and Orion interior models, as acknowledged in the dissertation.
-- **Nilsson et al., CHI 2023:** [Using Virtual Reality to Shape Humanity's Return to the Moon](https://doi.org/10.1145/3544548.3580718), the principal prior-work reference.
-- **NASA LRO / LOLA and LROC QuickMap:** the terrain-data foundation; the full acquisition and processing method is documented in dissertation Sections 3.2 and 4.1.
+There's also an embedded URP package with local stereo-flare changes; its [patch notes](Packages/com.unity.render-pipelines.universal/LUNARVR-PATCH.md) explain why it's kept. Rendering and headset tweaks made after the dissertation aren't the configuration evaluated in the report, and flare alignment and occlusion still need device-specific testing.
+
+Appendix B of the dissertation mentions an earlier repository URL and shader location. **This repo is the current project archive**, and the links above match its actual layout.
+
+</details>
+
+## What's next
+
+The prototype is deliberately small: one terrain region, one player, one EVA. Terrain texturing is simplified, light bouncing off neighbouring terrain isn't modelled, celestial motion is approximate, and spacesuit biomechanics are out of scope. The Orion interior was explored during development but isn't part of the finished surface mission.
+
+The dissertation points to where it could go from here: **a proper user evaluation, better terrain shading, ephemeris-driven sky motion, astronaut embodiment, a lunar rover, and bigger multi-scene environments.**
+
+## Thanks and references
+
+- **Mads Haahr**, my project supervisor at Trinity College Dublin.
+- **Tommy Nilsson**, for early scoping guidance and for the Apollo lander and Orion interior models, as acknowledged in the dissertation.
+- **Nilsson et al., CHI 2023:** [Using Virtual Reality to Shape Humanity's Return to the Moon](https://doi.org/10.1145/3544548.3580718), the main prior-work reference.
+- **NASA LRO / LOLA and LROC QuickMap:** the terrain data everything is built on. The full acquisition and processing method is in dissertation Sections 3.2 and 4.1.
 - **NASA Scientific Visualization Studio:** [Earth and Sun from the Moon's South Pole](https://svs.gsfc.nasa.gov/4944/), a celestial-geometry reference used in the research.
 
-Third-party models, textures, audio, and packages retain their respective terms. Their inclusion in this archive does not grant blanket permission to redistribute or reuse them. Screenshot provenance is recorded in [`docs/media/README.md`](docs/media/README.md).
+Third-party models, textures, audio and packages keep their own terms; having them in this archive doesn't grant permission to reuse or redistribute them. Where each README image came from is recorded in [`docs/media/README.md`](docs/media/README.md).
 
 ---
 
-**Start with the experience:** [Watch the lunar EVA walkthrough](https://youtu.be/z2SDj-kG6RA).
+<p align="center"><b>Best place to start:</b> <a href="https://youtu.be/z2SDj-kG6RA">watch the lunar EVA walkthrough</a> ▶</p>

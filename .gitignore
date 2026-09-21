@@ -113,3 +113,7 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Build and editor leftovers that were committed by accident once
+TempAssembly.dll
+*_BurstDebugInformation_DoNotShip/

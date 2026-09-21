@@ -1,3 +1,4 @@
 # Keep lightweight README images in regular Git, not the project's asset LFS store.
 *.png -filter -diff -merge -text
 *.jpg -filter -diff -merge -text
+*.webp -filter -diff -merge -text
