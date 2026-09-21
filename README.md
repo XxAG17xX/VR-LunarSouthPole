@@ -17,17 +17,10 @@
   <a href="#explore-the-source">Explore the source</a>
 </p>
 
-<table align="center">
-  <tr>
-    <td align="center"><h3>1.625 m/s²</h3><sub>lunar gravity</sub></td>
-    <td align="center"><h3>1.5°</h3><sub>sun above the horizon</sub></td>
-    <td align="center"><h3>1 km²</h3><sub>of real NASA terrain</sub></td>
-    <td align="center"><h3>~900 m</h3><sub>EVA traverse</sub></td>
-    <td align="center"><h3>~71 FPS</h3><sub>on a standalone Quest 3</sub></td>
-  </tr>
-</table>
+<p><img src="docs/media/ui/stats.png" alt="At a glance in numbers: 1.625 m/s² lunar gravity; sun 1.5° above the horizon; 1 km² of real NASA terrain; about a 900 m EVA traverse; about 71 FPS on a standalone Quest 3." width="100%"></p>
 
-## What is this?
+<a name="what-is-this"></a>
+<p><img src="docs/media/ui/h-01-what-is-this.png" alt="01 · What is this?" width="100%"></p>
 
 Picture stepping off a lunar lander, grabbing a science instrument, and carrying it across terrain you've never seen, into shadow, with the Earth hanging just above the horizon. That's what this project turns into a standalone VR experience.
 
@@ -40,19 +33,13 @@ The question driving it wasn't just *can the Moon look convincing in VR?* It was
   <sub>The whole EVA in about 30 seconds, from the lander to the sun going down. Cut from the <a href="https://youtu.be/z2SDj-kG6RA">full walkthrough</a>.</sub>
 </p>
 
-| At a glance | |
-| :--- | :--- |
-| **Experience** | Single-player lunar EVA (extravehicular activity) mission |
-| **Where** | Haworth-Nobile region, lunar south pole |
-| **Terrain** | 1,024 m × 1,024 m patch built from LOLA elevation data |
-| **Runs on** | Meta Quest 3, as a standalone Android app |
-| **Built with** | Unity 6, URP, C#, HLSL, Meta XR SDK |
-| **Context** | B.A.I. Computer Engineering final-year project, April 2026 |
+<p><img src="docs/media/ui/at-a-glance.png" alt="At a glance. Experience: single-player lunar EVA (extravehicular activity) mission. Where: Haworth-Nobile region, lunar south pole. Terrain: 1,024 m by 1,024 m patch built from LOLA elevation data. Runs on: Meta Quest 3, as a standalone Android app. Built with: Unity 6, URP, C#, HLSL, Meta XR SDK. Context: B.A.I. Computer Engineering final-year project, April 2026." width="100%"></p>
 
 > [!TIP]
 > **You don't need to download anything.** The [video walkthrough](https://youtu.be/z2SDj-kG6RA), the images here and the research summary below are the best way in. This repo keeps the full Unity project and its history, but it isn't packaged as a one-click release.
 
-## The mission
+<a name="the-mission"></a>
+<p><img src="docs/media/ui/h-02-the-mission.png" alt="02 · The mission" width="100%"></p>
 
 It's inspired by lunar seismic science and the Artemis Lunar Environment Monitoring Station (LEMS) objective: a simplified interactive scenario rather than a copy of any approved mission procedure. Four steps, roughly a **900 m traverse** end to end:
 
@@ -75,7 +62,8 @@ Along the way, doors, proximity highlights, a navigation arrow, a deployment ind
 
 <sub>All captures are original, unretouched project images from April 2026 (the Retrieve and Deploy frames are taken from the walkthrough video). They show that version of the simulation, not every later change in this repo.</sub>
 
-## The research
+<a name="the-research"></a>
+<p><img src="docs/media/ui/h-03-the-research.png" alt="03 · The research" width="100%"></p>
 
 **VR Simulation of the Lunar South Pole: A Physically Parameterised Environment**<br>
 Kartik Gupta · Trinity College Dublin · April 2026 · Supervisor: **Mads Haahr**
@@ -88,14 +76,7 @@ It builds on the direction of Nilsson et al.'s CHI 2023 study, *Using Virtual Re
 
 Every key design parameter in the dissertation traces back to a published source:
 
-| Parameter | What the simulation uses |
-| :--- | :--- |
-| Surface gravity | 1.625 m/s² |
-| Sun angle | Low-angle light at 1.5° solar elevation |
-| Terrain relief | NASA LRO / LOLA elevation data, 5 m/pixel source product |
-| Terrain in Unity | 1,025 × 1,025 heightmap over a 1,024 m square |
-| Sun and Earth size in the sky | 0.53° and 1.9° apparent size (dissertation targets) |
-| Lighting | Hard direct shadows, zero ambient light |
+<p><img src="docs/media/ui/design-parameters.png" alt="Design parameters. Surface gravity: 1.625 m/s². Sun angle: low-angle light at 1.5° solar elevation. Terrain relief: NASA LRO / LOLA elevation data, 5 m/pixel source product. Terrain in Unity: 1,025 by 1,025 heightmap over a 1,024 m square. Sun and Earth size: 0.53° and 1.9° apparent size (dissertation targets). Lighting: hard direct shadows, zero ambient light." width="100%"></p>
 
 <p align="center">
   <img src="docs/media/earth-terminator.png" alt="Earth, half in shadow, seen from the lunar surface in the simulation." width="620"><br>
@@ -115,11 +96,13 @@ So it works on the headset, but with very little GPU headroom to spare.
 > - A planned miniPXI user study couldn't run within the university's ethics-approval timeline, so this project **doesn't claim** validated training effectiveness, measured learning gains, or user-study evidence of presence.
 > - It's an independent academic prototype, **not a NASA or ESA training product**. The Eagle is a historical Apollo asset used in an Artemis-inspired scenario, not a model of the planned Artemis lander.
 
-## How it works
+<a name="how-it-works"></a>
+<p><img src="docs/media/ui/h-04-how-it-works.png" alt="04 · How it works" width="100%"></p>
 
 ### From lunar data to a playable environment
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#161d29', 'primaryTextColor': '#e6ebf2', 'primaryBorderColor': '#5f7fa6', 'lineColor': '#86a3c8', 'secondaryColor': '#1b2433', 'tertiaryColor': '#10151e', 'edgeLabelBackground': '#10151e', 'fontFamily': 'Segoe UI, Helvetica, Arial, sans-serif', 'fontSize': '15px'}}}%%
 flowchart TD
     A["NASA LRO / LOLA elevation data"] --> B["Select Haworth-Nobile region in LROC QuickMap"]
     B --> C["QGIS / GDAL: process GeoTIFF and export 16-bit heightmap"]
@@ -139,6 +122,7 @@ The terrain pipeline and the physical parameters set up the world. Custom runtim
 ### The mission state machine
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#161d29', 'primaryTextColor': '#e6ebf2', 'primaryBorderColor': '#5f7fa6', 'lineColor': '#86a3c8', 'secondaryColor': '#1b2433', 'tertiaryColor': '#10151e', 'edgeLabelBackground': '#10151e', 'fontFamily': 'Segoe UI, Helvetica, Arial, sans-serif', 'fontSize': '15px'}}}%%
 stateDiagram-v2
     [*] --> PickUp
     PickUp --> CarryToZone: Pick up seismometer
@@ -151,7 +135,8 @@ stateDiagram-v2
 
 These states and transitions come straight from [`MissionManager.cs`](Assets/Scripts/MissionManager.cs).
 
-## Explore the source
+<a name="explore-the-source"></a>
+<p><img src="docs/media/ui/h-05-explore-the-source.png" alt="05 · Explore the source" width="100%"></p>
 
 The main scene is [`Assets/LunarVR.unity`](Assets/LunarVR.unity), and the code that makes it tick lives in [`Assets/Scripts/`](Assets/Scripts/).
 
@@ -190,13 +175,15 @@ Appendix B of the dissertation mentions an earlier repository URL and shader loc
 
 </details>
 
-## What's next
+<a name="whats-next"></a>
+<p><img src="docs/media/ui/h-06-whats-next.png" alt="06 · What's next" width="100%"></p>
 
 The prototype is deliberately small: one terrain region, one player, one EVA. Terrain texturing is simplified, light bouncing off neighbouring terrain isn't modelled, celestial motion is approximate, and spacesuit biomechanics are out of scope. The Orion interior was explored during development but isn't part of the finished surface mission.
 
 The dissertation points to where it could go from here: **a proper user evaluation, better terrain shading, ephemeris-driven sky motion, astronaut embodiment, a lunar rover, and bigger multi-scene environments.**
 
-## Thanks and references
+<a name="thanks-and-references"></a>
+<p><img src="docs/media/ui/h-07-thanks.png" alt="07 · Thanks and references" width="100%"></p>
 
 - **Mads Haahr**, my project supervisor at Trinity College Dublin.
 - **Tommy Nilsson**, for early scoping guidance and for the Apollo lander and Orion interior models, as acknowledged in the dissertation.
