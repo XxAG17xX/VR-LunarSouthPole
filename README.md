@@ -163,7 +163,7 @@ The checked-in editor version is **Unity 6000.3.8f1**; package versions are in [
 <summary><strong>Repo storage, Git LFS, and building it yourself</strong></summary>
 <br>
 
-This repo is both a showcase and my personal development archive. The big Unity assets are kept so the work can be revisited, not because anyone's expected to download and build it.
+This repo is both a showcase and my personal development archive, not a complete redistribution of every asset used in the project. Privately supplied Apollo Eagle and Orion interior models, including their textures and materials, are intentionally omitted. See [the model asset notice](Assets/Models/README.md). A fresh clone will have missing scene references and needs appropriately licensed replacements; Git LFS does not restore these omitted assets.
 
 [`.gitattributes`](.gitattributes) sends large asset types (textures, models, audio, Unity `.asset` files) through **Git Large File Storage (LFS)**. Git itself only stores small pointer files, and the actual binaries live separately in LFS, so a checkout without them isn't a complete Unity project. More in [GitHub's Git LFS docs](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage). The small images under `docs/media/` are deliberately kept in regular Git, so this README doesn't need any LFS downloads.
 

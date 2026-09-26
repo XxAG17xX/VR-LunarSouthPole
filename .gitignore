@@ -14,6 +14,11 @@
 # See: https://github.com/github/gitignore/tree/main/Global
 #
 .utmp/
+# Privately supplied models: retain locally, never publish.
+/Assets/Models/Eagle_lander/
+/Assets/Models/Eagle_lander.meta
+/Assets/Models/Orion_Interior/
+/Assets/Models/Orion_Interior.meta
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
